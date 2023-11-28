@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:54:16 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/28 12:48:17 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:57:40 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 typedef struct s_stack
 {
 	int				value;
-	int				idx;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;

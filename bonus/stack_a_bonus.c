@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:36:04 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/17 14:37:30 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:58:27 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,12 @@
 void	ft_sa(t_stack **a)
 {
 	int	temp;
-	int	idx_temp;
 
 	if (*a == 0)
 		return ;
 	temp = (*a)->value;
-	idx_temp = (*a)->idx;
 	(*a)->value = (*a)->next->value;
-	(*a)->idx = (*a)->next->idx;
 	(*a)->next->value = temp;
-	(*a)->next->idx = idx_temp;
 }
 
 void	ft_pa(t_stack **a, t_stack **b)

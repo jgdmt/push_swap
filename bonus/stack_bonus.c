@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 14:08:18 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/27 17:39:06 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 14:57:54 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ t_stack	*ft_stnew(int value)
 	new->next = new;
 	new->prev = new;
 	new->value = value;
-	new->idx = 0;
 	return (new);
 }
 
