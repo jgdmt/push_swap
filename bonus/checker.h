@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:54:16 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/27 17:51:29 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:48:17 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,11 @@ void	ft_init_stack(int value, t_stack **a);
 void	ft_free_stack(t_stack **a);
 
 // Check entry functions
-void	ft_check_format(char *str);
-void	ft_error(void);
-void	ft_check_double(int num, char **strs);
+void	ft_check_format(char *str, char **strs, int to_free, t_stack **a);
+void	ft_error(int to_free, char **strs);
+void	ft_check_double(int num, char **strs, int to_free);
 int		ft_strcmp(char *s1, char *s2);
+void	ft_free_arg(char **argv);
 
 // Read entry functions
 void	ft_read_op(t_stack **a);

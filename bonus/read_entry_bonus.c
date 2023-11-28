@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 17:50:27 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/27 17:51:14 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:50:58 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	ft_read_op(t_stack **a)
 	{
 		ft_put_back(a, &b);
 		ft_free_stack(a);
-		ft_error();
+		ft_error(0, 0);
 	}
 	if (ft_slen(&b) != 0 || ft_is_sorted(a) != 1)
 		write(1, "KO\n", 3);

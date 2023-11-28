@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:43:52 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/13 19:10:21 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:44:37 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,10 @@ void	ft_free_stack(t_stack **a);
 void	ft_stack_idx(t_stack **s, int s_size);
 
 // Check entry functions
-void	ft_check_format(char *str);
-void	ft_error(void);
-void	ft_check_double(int num, char **strs);
+void	ft_check_format(char *str, char **strs, int to_free, t_stack **a);
+void	ft_error(int to_free, char **strs);
+void	ft_check_double(int num, char **strs, int to_free);
+void	ft_free_arg(char **argv);
 
 // Quicksort 
 void	ft_quicksort(t_stack **a, t_stack **b);

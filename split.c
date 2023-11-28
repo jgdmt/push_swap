@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:43:48 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/27 17:41:10 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/28 12:00:02 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,21 @@ static int	ft_count(char *str)
 	{
 		while (*str && *str == ' ')
 			str++;
+		if (c > 0 && *str == '-' && (*(str - 1) != ' '))
+			ft_error(0, 0);
 		if (*str == '-' && (*(str + 1) <= '9' && *(str + 1) >= '0'))
 			str++;
 		if (*str == '0' && (*(str + 1) != ' ' && *(str + 1) != '\0'))
-			ft_error();
+			ft_error(0, 0);
 		if ((*str > '9' || *str < '0') && *str != '\0')
-			ft_error();
+			ft_error(0, 0);
 		if (*str >= '0' && *str <= '9')
 			c++;
 		while (*str >= '0' && *str <= '9')
 			str++;
 	}
 	if (c == 0)
-		ft_error();
+		ft_error(0, 0);
 	return (c);
 }
 

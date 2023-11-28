@@ -11,7 +11,7 @@ SRCS			:=	check_entry.c \
 					sort_exceptions.c \
 					quicksort.c
 
-SRCS2			:=	bonus/check_entry_bonus.c \
+SRCS2			:=	check_entry.c \
 					bonus/checker_bonus.c \
 					bonus/sort_functions_bonus.c \
 					bonus/stack_a_bonus.c \
