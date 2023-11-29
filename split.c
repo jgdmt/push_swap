@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:43:48 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/28 12:00:02 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/29 12:15:44 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,7 @@ static int	ft_make_words(char **strs, char *s, int w_num, int *argv)
 		word[j] = 0;
 		strs[w_num++] = word;
 	}
+	strs[w_num] = 0;
 	return (0);
 }
 
@@ -100,7 +101,7 @@ char	**ft_mod_split(char **str, int *argv, int *is_mal)
 	*argv = ft_count(str[1]) + 1;
 	if (*argv == 2)
 		return (str);
-	strs = malloc(*argv * sizeof(char *));
+	strs = malloc((*argv + 1) * sizeof(char *));
 	if (!strs)
 		exit (-1);
 	strs[0] = str[0];

@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:07:33 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/28 12:42:33 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/29 12:41:07 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	main(int argc, char *argv[])
 	{
 		ft_check_format(argv[argc], argv, is_mal, &a);
 		num = ft_atoli(argv[argc], &a, is_mal, argv);
-		ft_init_stack(num, &a);
+		ft_init_stack(num, &a, is_mal, argv);
 	}
 	if (is_mal == 1)
 		ft_free_arg(argv);

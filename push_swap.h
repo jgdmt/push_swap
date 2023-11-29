@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:43:52 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/28 12:44:37 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/29 12:40:50 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	**ft_mod_split(char **str, int *argv, int *is_mal);
 // Stack functions
 t_stack	*ft_stnew(int value);
 void	ft_push(t_stack **a, t_stack *new);
-void	ft_init_stack(int value, t_stack **a);
+void	ft_init_stack(int value, t_stack **a, int to_free, char **argv);
 void	ft_free_stack(t_stack **a);
 void	ft_stack_idx(t_stack **s, int s_size);
 

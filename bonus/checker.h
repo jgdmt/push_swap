@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 13:54:16 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/28 14:57:40 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/29 12:45:10 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_rrr(t_stack **a, t_stack **b);
 // Stack functions
 t_stack	*ft_stnew(int value);
 void	ft_push(t_stack **a, t_stack *new);
-void	ft_init_stack(int value, t_stack **a);
+void	ft_init_stack(int value, t_stack **a, int to_free, char **argv);
 void	ft_free_stack(t_stack **a);
 
 // Check entry functions

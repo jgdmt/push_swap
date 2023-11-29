@@ -6,7 +6,7 @@
 /*   By: jgoudema <jgoudema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:43:41 by jgoudema          #+#    #+#             */
-/*   Updated: 2023/11/27 17:37:51 by jgoudema         ###   ########.fr       */
+/*   Updated: 2023/11/29 12:40:28 by jgoudema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,13 +65,15 @@ void	ft_stack_idx(t_stack **s, int s_size)
 	}
 }
 
-void	ft_init_stack(int value, t_stack **a)
+void	ft_init_stack(int value, t_stack **a, int to_free, char **argv)
 {
 	t_stack	*new;
 
 	new = ft_stnew(value);
 	if (!new)
 	{
+		if (to_free)
+			ft_free_arg(argv);
 		ft_free_stack(a);
 		exit(-1);
 	}
