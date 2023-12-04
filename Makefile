@@ -41,7 +41,9 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-bonus:			$(OBJS2)
+bonus:			$(BONUS)
+
+$(BONUS):		$(OBJS2)
 				$(CC) $(CFLAGS) -o $(BONUS) $(OBJS2)
 
 clean:
